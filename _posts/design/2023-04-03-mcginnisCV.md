@@ -1,9 +1,7 @@
 ---
 layout: page
-subheadline: ""
-title:  "David McGinnis CV"
+title:  "McGinnis CV"
 header: no
-author: david-mcginnis
 ---
 David McGinnis Ph.D.  
 dmcginnis427@gmail.com  
