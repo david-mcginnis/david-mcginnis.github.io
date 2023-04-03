@@ -1,0 +1,678 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<!-- Head -->
+    <meta charset="UTF-8"/>
+    <link rel="icon" sizes="32x32" href="http://localhost:4000/assets/img/favicon-32x32.png">
+<!--    <link rel="icon" href="/img/favicon.ico?v=4" type="image/x-icon"/> -->
+    <title>Tommy3Tone</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" >
+    <link rel="stylesheet" href="/assets/tommy3tone/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/assets/tommy3tone/jquery/jquery-ui.css"/>
+    <script src="/assets/tommy3tone/jquery/jquery.js"></script>
+    <script src="/assets/tommy3tone/jquery/jquery-ui.js"></script>
+
+    <!-- Custom CSS -->
+    <style>
+        :root {
+          --container-background-color: #083357;
+          --container-title-color: #fcc200;
+          --container-text-color: #ffffff;
+          --background-color: #ffffff;
+          --background-text: #083357;
+          --sub-container-background-color: #c6c2bb;
+          --sub-container-title-color: #083357;
+          --sub-container-text-color: #000000;
+        }
+        ul {
+            list-style-type: disk;
+            color: var(--container-background-color);
+        }
+        li {
+            font-size: 40px;
+            vertical-align:middle;
+        }
+        body {
+          background-color: var(--background-color);
+          padding-left:25px;
+          padding-right:25px;
+        }
+        .link-text {
+          color: var(--container-background-color);
+          text-decoration: underline;
+        }
+        :hover.link-hover {
+          color: var(--background-text);
+          text-decoration: underline;
+        }
+       .link-icon {
+          padding: 1px;
+          color: var(--container-background-color);
+        }
+       .link-icon-hover {
+          padding: 1px;
+          color: var(--background-text);
+        }
+        
+        img {
+          object-fit: contain;
+        }
+        .col {
+          padding-bottom: 20px;
+        }
+        .jumbotron {
+          background-color: var(--container-background-color) !important;
+          color:var(--container-text-color);
+          padding-bottom: 10px;
+          padding-top: 10px;
+        }
+        .jumbotron-link
+        {
+            color: var(--container-title-color);
+            text-decoration: underline;
+        }
+        :hover.jumbotron-link-hover
+        {
+            color: var(--sub-container-background-color);
+            text-decoration: underline;
+        }    
+        .jumbotron-title
+        {
+          color:var(--container-title-color);
+        }
+        .jumbotron-button
+        {
+          color: var(--container-background-color);
+          background-color: var(--container-title-color);
+        }
+        .featurette-heading
+        {
+          color:var(--container-background-color);
+        }
+        .featurette-heading-link
+        {
+          color: var(--container-background-color);
+        }
+        .card
+        {
+          background-color: var(--container-background-color);
+          text-align: center;
+          padding: 10px;
+        }
+        .card-body
+        {
+          color: var(--sub-container-text-color);
+          background-color: var(--sub-container-background-color);
+        }
+        .card-button
+        {
+          color: var(--container-title-color);
+          font-weight: bold;
+          background-color: var(--container-background-color);
+        }
+        .card-title
+        {
+          color: var(--container-title-color);
+          font-weight: bold;
+        }
+        .card-major-bullet
+        {
+          text-align: left;
+        }
+        .card1-minor-bullet
+        {
+          text-align: left;
+        }
+        .card-minor-minor-bullet {
+        	font-size:  small;
+          font-style:italic;
+        }
+        
+        .card-text
+        {
+          text-align: left;
+        }
+        .scrolling-wrapper {
+          width: 100%;
+          display: inline-block;
+          overflow-x: scroll;
+          overflow-y: hidden;
+          white-space: nowrap;
+        }
+        .footer {
+        /*   position: fixed; */
+           left: 0;
+           bottom: 0;
+           width: 100%;
+           color:var(--container-background-color);
+           background-color: var(--background-color);
+           text-align: center;
+        }
+        .img-max {
+          width: 99%;
+        }
+        .bot-pad
+        {
+          padding-bottom: 20px;
+        }
+        .span-left-justify
+        {
+          float:left;
+        }
+        .right-justify
+        {
+          text-align: right;
+        }
+        .left-justify
+        {
+          text-align: left;
+        }
+        .center-justify
+        {
+          text-align: center;
+        }
+        .solarPlotButton
+        {
+          width :90%;
+        }
+        .radio-button-border
+        {
+          border-style: solid;
+          border-color: var(--container-title-color);
+          border-width: 2px;
+          background-color: var(--background-color);
+        }
+        .tableHeading
+        {
+          color:var(--container-title-color);
+          font-weight: 900;
+        }
+        .tableText
+        {
+          color:var(--background-text);
+          font-weight: 900;
+        }
+        .custom-select
+        {
+          color: var(--sub-container-text-color);
+          background-color: var(--background-color);
+        
+        }
+        .plain-text
+        {
+            color: var(--sub-container-text-color);
+            font-size:medium;
+        }
+        .form-check
+        {
+          color: var(--sub-container-text-color);
+          background-color: var(--background-color);
+        }
+        .googleSlide4by3-container 
+        {
+            position: relative;
+            overflow: hidden;
+            padding-top: 75.0%;
+        }
+        .googleSlide4by3-iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }        
+        .website1by3-container 
+        {
+            position: relative;
+            overflow: hidden;
+            padding-top: 300.0%;
+        }
+        .website1by3-iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }        
+        .website1by2-container 
+        {
+            position: relative;
+            overflow: hidden;
+            padding-top: 200.0%;
+        }
+        .website1by2-iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+    </style>
+    <script>
+// Custom Javascript
+        window.addEventListener("resize", imageLoaded);
+        var imageHasBeenLoaded = false;
+        var img;
+        var imageLevels = 4;
+        var gridOn = true;
+        var weightType = 'linear';
+        var rotationDegrees = 0.0;
+        $( document ).ready(function()
+        {
+            onDocumentReady();
+        });
+        function onDocumentReady()
+        {
+             $('#imageLevel').html(imageLevels.toString());
+            if (gridOn)
+            {
+                $('#gridOn').html('On');
+            }
+            else
+            {
+                $('#gridOn').html('Off');
+            }
+            if (weightType == 'sqrt')
+            {
+                $('#weight').html('Sqrt');
+            }
+            else
+            {
+                $('#weight').html('Linear');
+            }
+            $('#rotationDegrees').html(rotationDegrees.toString());
+        }
+
+        // Got from http://jsfiddle.net/z3JtC/4
+        function loadImage() 
+        {
+            var input, file, fr;
+        
+            if (typeof window.FileReader !== 'function') {
+                write("The file API isn't supported on this browser yet.");
+                return;
+            }
+        
+            input = document.getElementById('imgfile');
+            if (!input) {
+                write("Um, couldn't find the imgfile element.");
+            }
+            else if (!input.files) {
+                write("This browser doesn't seem to support the `files` property of file inputs.");
+            }
+            else if (!input.files[0]) {
+                write("Please select a file before clicking 'Load'");
+            }
+            else {
+                file = input.files[0];
+                fr = new FileReader();
+                fr.onload = createImage;
+                fr.readAsDataURL(file);
+            }
+        
+            function createImage() {
+                img = new Image();
+                img.onload = imageLoaded;
+                img.src = fr.result;
+                imageHasBeenLoaded = true;
+            }
+        }
+        function imageLoaded() 
+        {
+            if (!imageHasBeenLoaded) return;
+            drawImage('colorCanvas');
+            drawImage('bwCanvas');
+            drawImage('levelCanvas');
+        
+            colorFilter();
+            if (gridOn)
+            {
+                drawGrid('colorCanvas');
+                drawGrid('bwCanvas');
+                drawGrid('levelCanvas');
+            }
+        }
+        function drawImage(canvasId)
+        {
+            if (!imageHasBeenLoaded) return;
+            var canvas = document.getElementById(canvasId); 
+            var canvasContext = canvas.getContext("2d");
+            
+            var widthRatio;
+            var heightRatio;
+            var scaleRatio;
+        
+            if ((rotationDegrees == -90) || (rotationDegrees == 90))
+            {
+                widthRatio = window.innerWidth / img.height;
+                heightRatio = window.innerHeight / img.width;
+                scaleRatio = widthRatio;
+                if (heightRatio < scaleRatio) scaleRatio = heightRatio;
+                canvas.width = Math.round(img.height * scaleRatio);
+                canvas.height = Math.round(img.width * scaleRatio);
+                canvasContext.drawImage(img, (canvas.width - canvas.height) / 2, (canvas.height - canvas.width) / 2, canvas.height, canvas.width);
+                
+                canvasContext.clearRect(0,0,canvas.width,canvas.height);
+                canvasContext.save();
+                canvasContext.translate(canvas.width / 2,canvas.height / 2);
+                canvasContext.rotate(rotationDegrees * Math.PI / 180);
+                canvasContext.drawImage(img,-canvas.height / 2, -canvas.width / 2, canvas.height, canvas.width);
+                canvasContext.restore();
+             }
+            else
+            {
+                widthRatio = window.innerWidth / img.width;
+                heightRatio = window.innerHeight / img.height;
+                scaleRatio = widthRatio;
+                if (heightRatio < scaleRatio) scaleRatio = heightRatio;
+                canvas.width = Math.round(img.width * scaleRatio);
+                canvas.height = Math.round(img.height * scaleRatio);
+                canvasContext.drawImage(img,0,0, canvas.width, canvas.height);
+                
+                canvasContext.clearRect(0,0,canvas.width,canvas.height);
+                canvasContext.save();
+                canvasContext.translate(canvas.width / 2,canvas.height / 2);
+                canvasContext.rotate(rotationDegrees * Math.PI / 180);
+                canvasContext.drawImage(img,-canvas.width / 2, -canvas.height / 2, canvas.width, canvas.height);
+                canvasContext.restore();
+            }
+        
+        }
+        function colorFilter()
+        {
+            var bwCanvas = document.getElementById("bwCanvas"); 
+            var bwCanvasContext = bwCanvas.getContext("2d");
+        
+            var levelCanvas = document.getElementById("levelCanvas"); 
+            var levelCanvasContext = levelCanvas.getContext("2d");
+        
+            //Declare variables
+            var bwImgData = bwCanvasContext.getImageData(0,0,bwCanvas.width,bwCanvas.height);
+            var levelImgData = levelCanvasContext.getImageData(0,0,levelCanvas.width,levelCanvas.height);
+        
+            var red;    
+            var green; 
+            var blue; 
+            var avg = []; 
+            var alpha = [];
+            var nPixels = bwImgData.data.length / 4;
+            var max = 0;
+            var min = 255;
+        
+            for (var ii = 0; ii < nPixels; ++ii) 
+            {                     
+                red   = bwImgData.data[4 * ii + 0];
+                green = bwImgData.data[4 * ii + 1];
+                blue  = bwImgData.data[4 * ii + 2]; 
+                alpha[ii] = bwImgData.data[4 * ii + 3]; 
+                avg[ii] = Math.round((red + green + blue) / 3);
+                if (avg[ii] < min) min = avg[ii];
+                if (avg[ii] > max) max = avg[ii];
+        
+            }
+            //normalize
+            var delta = max - min;
+            for (ii = 0; ii < nPixels; ++ii) 
+            {  
+               avg[ii] = Math.round(254 * (avg[ii] - min) / delta) + 1;
+            } 
+            
+            // Write the image back to the canvas
+            for (ii = 0; ii < nPixels; ++ii) 
+            {                     
+                bwImgData.data[4 * ii + 0] = avg[ii];
+                bwImgData.data[4 * ii + 1] = avg[ii];
+                bwImgData.data[4 * ii + 2] = avg[ii]; 
+                bwImgData.data[4 * ii + 3] = alpha[ii];   
+            }
+            bwCanvasContext.putImageData(bwImgData, 0, 0);
+        
+            if (weightType == 'sqrt')
+            {
+                //log
+                var log255= Math.sqrt(255.0);
+                for (ii = 0; ii < nPixels; ++ii) 
+                {  
+                   avg[ii] = Math.round(255.0 * Math.sqrt(avg[ii]) / log255);
+                } 
+            }
+            
+            for (ii = 0; ii < nPixels; ++ii) 
+            {  
+               avg[ii] = 255 * Math.round(imageLevels * avg[ii] / 255) / imageLevels;
+               avg[ii] = Math.round(avg[ii]);
+            } 
+        
+            // Write the image back to the canvas
+            for (ii = 0; ii < nPixels; ++ii) 
+            {                     
+                levelImgData.data[4 * ii + 0] = avg[ii];
+                levelImgData.data[4 * ii + 1] = avg[ii];
+                levelImgData.data[4 * ii + 2] = avg[ii]; 
+                levelImgData.data[4 * ii + 3] = alpha[ii];   
+            }
+            levelCanvasContext.putImageData(levelImgData, 0, 0);
+        } 
+        function drawGrid(canvasId)
+        {
+            var canvas = document.getElementById(canvasId); 
+            var canvasContext = canvas.getContext("2d");
+        
+            var imgData = canvasContext.getImageData(0,0,canvas.width,canvas.height);
+            var xstart, ystart, xstop, ystop, width, height;
+            
+            width = imgData.width;
+            height = imgData.height;
+            canvasContext.strokeStyle = "#FF00FF";
+            for (var ii = 1; ii < 4; ++ii)
+            {
+                xstart = 0;
+                xstop = width;
+                ystart = ii * height / 4;
+                ystop = ystart;
+                canvasContext.moveTo(xstart,ystart);
+                canvasContext.lineTo(xstop,ystop);
+                canvasContext.stroke();
+         
+                ystart = 0;
+                ystop = height;
+                xstart = ii * width / 4;
+                xstop = xstart;
+                canvasContext.moveTo(xstart,ystart);
+                canvasContext.lineTo(xstop,ystop);
+                canvasContext.stroke();
+           }
+        
+        }
+        function setLevel(up)
+        {
+            imageLevels = imageLevels + up;
+            if (imageLevels < 1) imageLevels = 1;
+            if (imageLevels > 10) imageLevels = 10;
+            $('#imageLevel').html(imageLevels.toString());
+            imageLoaded();
+            
+        }
+        function setGridOn(setGridOn)
+        {
+            gridOn = setGridOn;
+            if (gridOn)
+            {
+                $('#gridOn').html('On');
+            }
+            else
+            {
+                $('#gridOn').html('Off');
+            }
+            imageLoaded();
+        }
+        function setWeight(newWeightType)
+        {
+            weightType = newWeightType;
+            if (weightType == 'sqrt')
+            {
+                $('#weight').html('Sqrt');
+            }
+            else
+            {
+                $('#weight').html('Linear');
+            }
+            imageLoaded();
+            
+        }
+        function rotateAllImages(clockwise)
+        {
+            rotationDegrees = rotationDegrees + clockwise * 90;
+            if (rotationDegrees >  180.0) rotationDegrees = rotationDegrees - 360;
+            if (rotationDegrees < -180.0) rotationDegrees = rotationDegrees + 360;
+            $('#rotationDegrees').html(rotationDegrees.toString());
+            imageLoaded();
+        }
+    </script>
+  </head>
+  <body>
+<!-- navBar -->
+    <div class="jumbotron" width="100%">
+        <div class="row">
+            <div class="col-md-12" style="text-align: center">
+                <h1 class="jumbotron-title"><img src="/assets/tommy3tone/img/pencil.png" height="50px"/>Tommy3Tone</h1>
+            </div>
+        </div>
+    </div>
+<!-- Body HTML -->
+    <table width='95%' align='center'>
+        <tr>
+            <td width='50%'>
+                <div class='card'>
+                    <p class='card-title'>Image</p>
+                    <div class='card-body' align="center">
+                        <table width='100%'>
+                            <tr>
+                                <td width='100%'>
+                                    <input id='imgfile' type="file" onchange="loadImage()">
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </td>
+            <td width='50%'>
+                <div class='card'>
+                    <p class='card-title'>Grid</p>
+                    <div class='card-body' align="center">
+                        <table width='100%'>
+                            <tr>
+                                <td width='25%'>
+                                    <button class='btn card-button btn-block' onclick="setGridOn(false)">Off</button>
+                                </td>
+                                <td width='50%' align='center'>
+                                    <span class='tableText' id='gridOn' >Oops!</span>
+                                </td>
+                                <td width='25%'>
+                                    <button class='btn card-button btn-block' onclick="setGridOn(true)">On</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <table width='95%' align='center'>
+        <tr>
+            <td width='33%'>
+                <div class='card'>
+                    <p class='card-title'>Levels</p>
+                    <div class='card-body' align="center">
+                        <table width='100%'>
+                            <tr>
+                                <td width='25%'>
+                                    <button class='btn card-button btn-block' onclick="setLevel(-1)">&#9660</button>
+                                </td>
+                                <td width='50%' align='center'>
+                                    <span class='tableText' id='imageLevel' >-1</span>
+                                </td>
+                                <td width='25%'>
+                                    <button class='btn card-button btn-block' onclick="setLevel(1)">&#9650</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </td>
+            <td width='33%'>
+                <div class='card'>
+                    <p class='card-title'>Weight</p>
+                    <div class='card-body' align="center">
+                        <table width='100%'>
+                            <tr>
+                                <td width='25%'>
+                                    <button class='btn card-button btn-block' onclick="setWeight('linear')">Linear</button>
+                                </td>
+                                <td width='50%' align='center'>
+                                    <span class='tableText' id='weight' >Oops!</span>
+                                </td>
+                                <td width='25%'>
+                                    <button class='btn card-button btn-block' onclick="setWeight('sqrt')">Sqrt</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </td>
+            <td width='33%'>
+                <div class='card'>
+                    <p class='card-title'>Rotate</p>
+                    <div class='card-body' align="center">
+                        <table width='100%'>
+                            <tr>
+                                <td width='25%'>
+                                    <button class='btn card-button btn-block' onclick="rotateAllImages(-1)">-90</button>
+                                </td>
+                                <td width='50%' align='center'>
+                                    <span class='tableText' id='rotationDegrees' >Oops!</span>
+                                </td>
+                                <td width='25%'>
+                                    <button class='btn card-button btn-block' onclick="rotateAllImages(1)">+90</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <hr>
+    <table width='100%' align='center'>
+        <tr>
+            <td align='center'>
+                <canvas id="levelCanvas" width='100' height='100'>Your browser does not support the HTML5 canvas tag.</canvas>
+                <hr>
+            </td>
+        </tr>
+        <tr>
+            <td align='center'>
+                <canvas id="bwCanvas" width='100' height='100'>Your browser does not support the HTML5 canvas tag.</canvas>
+                <hr>
+            </td>
+        </tr>
+        <tr>
+            <td align='center'>
+                <canvas id="colorCanvas" width='100' height='100' >Your browser does not support the HTML5 canvas tag.</canvas>
+                <hr>
+            </td>
+        </tr>
+     </table>
+<!-- Foot -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" ></script>
+
+  </body>
+</html>

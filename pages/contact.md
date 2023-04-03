@@ -3,7 +3,8 @@ layout              : page
 title               : "Contact"
 meta_title          : "Contact and use our contact form"
 subheadline         : "Contact Form"
-teaser              : "Get in touch with me? Use the contact form."
+teaser              : "Get in touch with me?"
 permalink           : "/contact/"
 ---
-If you need a fabulous contact form for your website, I suggest you use the free version of [Wufoo](http://www.wufoo.com/)
+
+Message me on [LinkedIn](https://www.linkedin.com/in/david-mcginnis-448b9a260/).
