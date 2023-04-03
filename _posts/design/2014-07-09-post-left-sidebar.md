@@ -9,9 +9,11 @@ tags:
     - post format
 categories:
     - design
+header: no
 image:
     thumb: gallery-example-3-thumb.jpg
     title: gallery-example-3.jpg
+    homepage: gallery-example-3.jpg
     caption_url: http://unsplash.com
 ---
 *Feeling Responsive* shows metadata by default. The default behaviour can be changed via `config.yml`. To show metadata at the end of a page/post just add the following to front matter:
