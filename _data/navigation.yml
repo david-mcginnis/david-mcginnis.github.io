@@ -6,13 +6,14 @@
   url: "/mcginnisCV/"
   side: left
 
-- title: UC408
-  url: "/uc408/"
+- title: "RF Courses"
+  url: "/design/"
   side: left
-
-- title: RF Lab
-  url: "/rflab/"
-  side: left
+  dropdown:
+  - title: "Radio Frequency Concepts"
+    url: "/rfConcepts/"
+  - title: "Microwave Measurements "
+    url: "/microwaveMeasurementLab/"
 
 - title: "Search"
   url: "/search/"
