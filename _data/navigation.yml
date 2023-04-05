@@ -10,6 +10,10 @@
   url: "/uc408/"
   side: left
 
+- title: RF Lab
+  url: "/rflab/"
+  side: left
+
 
 - title: "Search"
   url: "/search/"
