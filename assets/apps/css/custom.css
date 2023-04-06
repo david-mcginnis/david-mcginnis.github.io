@@ -1,0 +1,236 @@
+:root {
+  --container-background-color: #083357;
+  --container-title-color: #fcc200;
+  --container-text-color: #ffffff;
+  --background-color: #ffffff;
+  --background-text: #083357;
+  --sub-container-background-color: #c6c2bb;
+  --sub-container-title-color: #083357;
+  --sub-container-text-color: #000000;
+}
+ul {
+    list-style-type: disk;
+    color: var(--container-background-color);
+}
+li {
+    font-size: 40px;
+    vertical-align:middle;
+}
+body {
+  background-color: var(--background-color);
+  padding-left:25px;
+  padding-right:25px;
+}
+.link-text {
+  color: var(--container-background-color);
+  text-decoration: underline;
+}
+:hover.link-hover {
+  color: var(--background-text);
+  text-decoration: underline;
+}
+.link-icon {
+  padding: 1px;
+  color: var(--container-background-color);
+}
+.link-icon-hover {
+  padding: 1px;
+  color: var(--background-text);
+}
+
+img {
+  object-fit: contain;
+}
+.col {
+  padding-bottom: 20px;
+}
+.jumbotron {
+  background-color: var(--container-background-color) !important;
+  color:var(--container-text-color);
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.jumbotron-link
+{
+    color: var(--container-title-color);
+    text-decoration: underline;
+}
+:hover.jumbotron-link-hover
+{
+    color: var(--sub-container-background-color);
+    text-decoration: underline;
+}    
+.jumbotron-title
+{
+  color:var(--container-title-color);
+}
+.jumbotron-button
+{
+  color: var(--container-background-color);
+  background-color: var(--container-title-color);
+}
+.featurette-heading
+{
+  color:var(--container-background-color);
+}
+.featurette-heading-link
+{
+  color: var(--container-background-color);
+}
+.card
+{
+  background-color: var(--container-background-color);
+  text-align: center;
+  padding: 10px;
+}
+.card-body
+{
+  color: var(--sub-container-text-color);
+  background-color: var(--sub-container-background-color);
+}
+.card-button
+{
+  color: var(--container-title-color);
+  font-weight: bold;
+  background-color: var(--container-background-color);
+}
+.card-title
+{
+  color: var(--container-title-color);
+  font-weight: bold;
+}
+.card-major-bullet
+{
+  text-align: left;
+}
+.card1-minor-bullet
+{
+  text-align: left;
+}
+.card-minor-minor-bullet {
+    font-size:  small;
+  font-style:italic;
+}
+
+.card-text
+{
+  text-align: left;
+}
+.scrolling-wrapper {
+  width: 100%;
+  display: inline-block;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+.footer {
+/*   position: fixed; */
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   color:var(--container-background-color);
+   background-color: var(--background-color);
+   text-align: center;
+}
+.img-max {
+  width: 99%;
+}
+.bot-pad
+{
+  padding-bottom: 20px;
+}
+.span-left-justify
+{
+  float:left;
+}
+.right-justify
+{
+  text-align: right;
+}
+.left-justify
+{
+  text-align: left;
+}
+.center-justify
+{
+  text-align: center;
+}
+.solarPlotButton
+{
+  width :90%;
+}
+.radio-button-border
+{
+  border-style: solid;
+  border-color: var(--container-title-color);
+  border-width: 2px;
+  background-color: var(--background-color);
+}
+.tableHeading
+{
+  color:var(--container-title-color);
+  font-weight: 900;
+}
+.tableText
+{
+  color:var(--background-text);
+  font-weight: 900;
+}
+.custom-select
+{
+  color: var(--sub-container-text-color);
+  background-color: var(--background-color);
+
+}
+.plain-text
+{
+    color: var(--sub-container-text-color);
+    font-size:medium;
+}
+.form-check
+{
+  color: var(--sub-container-text-color);
+  background-color: var(--background-color);
+}
+.googleSlide4by3-container 
+{
+    position: relative;
+    overflow: hidden;
+    padding-top: 75.0%;
+}
+.googleSlide4by3-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}        
+.website1by3-container 
+{
+    position: relative;
+    overflow: hidden;
+    padding-top: 300.0%;
+}
+.website1by3-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}        
+.website1by2-container 
+{
+    position: relative;
+    overflow: hidden;
+    padding-top: 200.0%;
+}
+.website1by2-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}

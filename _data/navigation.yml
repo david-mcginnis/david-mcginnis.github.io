@@ -2,18 +2,22 @@
   url: "/"
   side: left
 
-- title: CV
+- title: About
   url: "/mcginnisCV/"
   side: left
 
 - title: "RF Courses"
-  url: "/design/"
+  url: "/rfcourses/"
   side: left
   dropdown:
   - title: "Radio Frequency Concepts"
     url: "/rfConcepts/"
   - title: "Microwave Measurements "
     url: "/microwaveMeasurementLab/"
+
+- title: Hylkevik Stones
+  url: "/stones/"
+  side: left
 
 - title: "Search"
   url: "/search/"

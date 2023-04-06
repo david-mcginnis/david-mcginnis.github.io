@@ -1,0 +1,157 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<!-- Head -->
+    <meta charset="UTF-8"/>
+    <link rel="icon" sizes="32x32" href="http://localhost:4000/assets/img/favicon-32x32.png">
+<!--    <link rel="icon" href="/img/favicon.ico?v=4" type="image/x-icon"/> -->
+    <title>Eq Stone 2</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" >
+    <link rel="stylesheet" href="/assets/apps/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/assets/apps/jquery/jquery-ui.css"/>
+    <script src="/assets/apps/jquery/jquery.js"></script>
+    <script src="/assets/apps/jquery/jquery-ui.js"></script>
+    <script src="/assets/apps/scripts/three.js"></script>
+    <script src="/assets/apps/scripts/GLTFLoader.js"></script>
+    <script src="/assets/apps/scripts/OrbitControls.js"></script>
+    <link rel="stylesheet" href="/assets/apps/css/custom.css"/>
+    <script>
+// Custom Javascript
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera( 75, 1.333, 0.1, 1000 );
+        const loader = new THREE.GLTFLoader();
+        const directionalLight = new THREE.DirectionalLight(0xffffff,5);
+        const renderer = new THREE.WebGLRenderer();
+        var model;
+
+        $( document ).ready(function()
+        {
+            onDocumentReady();
+        });
+        function onDocumentReady()
+        {
+            get3DPlot();
+        }
+        function get3DPlot()
+        {
+    
+            scene.background = new THREE.Color(0x016a71);            
+            directionalLight.position.set(0,0,1);
+            directionalLight.castShadow = false;
+            scene.add(directionalLight);
+            
+            var drawingSurface = document.getElementById( "canvas" );
+            renderer.setPixelRatio( window.devicePixelRatio );
+            renderer.setSize( 800, 600 ); // some width and height values
+            drawingSurface.appendChild( renderer.domElement );
+    
+            const controls = new THREE.OrbitControls(camera, renderer.domElement);
+            controls.addEventListener('change', function(event) {updateCamera(event);});
+
+            var loadingText =  "Loading.";   
+            $('#loadingId').text(loadingText);   
+            loader.load('/assets/apps/gltf/stone2-31-Dec-2020.gltf', function(gltf){
+                    $('#loadingId').text("Left click and hold on image and drag to rotate. Center mouse thumbwheel for zoom. Right mouse for pan");   
+                    model = gltf.scene;
+                    model.position.x = model.position.x - 0.01;
+                    model.position.z = model.position.z + 0.27;
+                    model.rotation.y += 99.0 * Math.PI / 180.0;
+                    scene.add( model );
+                    
+            		camera.position.set(0.36241938463411594, 0.537217387171639, -0.3340886161223469);
+            		camera.rotation.set(-2.3094834074551334, 0.7054677571992378, 2.5228711579343006);
+            		directionalLight.position.set(camera.position.x,camera.position.y, camera.position.z);
+                    animate();
+                },
+                // called while loading is progressing
+                function ( xhr ) 
+                {
+                    loadingText = loadingText + ".";
+                    $('#loadingId').text(loadingText);   
+                }
+                    
+            );
+    
+            var xoff = 0.0;//-0.24;            
+            var yoff =  0.35;
+            var zoff = 0.0;//0.137;
+            var origin = new THREE.Vector3( xoff, yoff, zoff );
+            var north  = new THREE.Vector3( 1.0, 0.0,  0.0 );
+            var east =   new THREE.Vector3( 0.0, 0.0,  1.0 );
+
+            var arrowHelperNorth = new THREE.ArrowHelper( north.normalize(),  origin, 0.2, 0xff0000 );
+            var arrowHelperUp = new THREE.ArrowHelper( new THREE.Vector3( 0, 1, 0 ).normalize(),  origin, 0.2, 0x00ff00 );
+            var arrowHelperEast = new THREE.ArrowHelper( east.normalize(),  origin, 0.4, 0x0000ff );
+            arrowHelperNorth.line.material.linewidth = 2;
+            arrowHelperUp.line.material.linewidth = 2;
+            arrowHelperEast.line.material.linewidth = 2;
+            scene.add( arrowHelperNorth );
+            scene.add( arrowHelperUp );
+            scene.add( arrowHelperEast );
+
+        }
+        function animate() 
+        {
+            renderer.render(scene,camera);
+            requestAnimationFrame(animate);
+        }
+
+        function updateCamera(e) 
+        {
+            directionalLight.position.set(camera.position.x,camera.position.y, camera.position.z);
+            console.log(camera);
+            renderer;
+        }
+
+    </script>
+  </head>
+  <body>
+<!-- navBar -->
+    <div class="jumbotron" width="100%">
+        <div class="row">
+            <div class="col-md-12" style="text-align: center">
+                <h1 class="jumbotron-title"><img src="/assets/apps/img/sunMark.png" height="50px"/>Hylkevik Equinox Stone 2</h1>
+            </div>
+        </div>
+    </div>
+<!-- Body HTML -->
+    <div id="container">
+        <div class='row'>
+            <div class='col-md-12'><p id="loadingId"></p></div>
+        </div>
+        <div class='row'>
+            <div class='col-md-12' align='center'>
+                <div id="canvas" style="background-color: #000;width: 800px;height: 600px;padding: 0px"></div>
+            </div>
+        </div>
+        <div class='row' style="padding-top:25px">
+            <div class='col-md-12' align='center'>
+                <table width="800px" style="border-style: solid; border-color: black;background-color:#e0e0e0;">
+                    <tr>
+                        <td align='center'><span style='color:#ff0000;font-weight: bold;'>North</span></td>
+                        <td align='center'><span style='color:#0000ff;font-weight: bold;'>East</span></td>
+                        <td align='center'><span style='color:#00ff00;font-weight: bold;'>Vertical</span></td>
+                    </tr>
+                    <tr>
+                        <td align='center'><span style='color:#ffff00;font-weight: bold;'>Winter Solstice Sunrise</span></td>
+                        <td align='center'><span style='color:#ff00ff;font-weight: bold;'>Equinox Noon</span></td>
+                        <td align='center'><span style='color:#00ffff;font-weight: bold;'>Celestial Pole</span></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class='row' style="padding-top:25px">
+            <div class='col-md-12' align='center'>
+                <a href="https://app.raa.se/open/fornsok/lamning/7b37a96a-2c50-4ae4-9a7a-6364fee57c1f" target="_blank">Fornsök - Riksantikvarieämbetet</a>
+            </div>
+        </div>
+    </div>
+<!-- Foot -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" ></script>
+
+  </body>
+</html>

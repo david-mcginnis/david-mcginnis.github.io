@@ -4,6 +4,10 @@ title:  "David P. McGinnis Ph.D."
 header:
     title: ""
     image_fullwidth: coolingArray.jpg
+
+show_meta: false
+breadcrumb: false
+
 ---
 ## Experience      
 * <ins>4/9/18 to present</ins>  MAX IV Laboratory - Lund, Sweden

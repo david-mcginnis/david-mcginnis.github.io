@@ -7,6 +7,9 @@ header:
     title: ""
     image_fullwidth: vla.jpg
 
+show_meta: false
+breadcrumb: false
+
 ---
 
 ## Overview

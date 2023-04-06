@@ -7,6 +7,9 @@ header:
     title: ""
     image_fullwidth: rfLab.jpg
 
+show_meta: false
+breadcrumb: false
+
 ---
 ## Overview
 Class taught with Ralph Pasquinelli of Fermilab for the [USPAS](http://uspas.fnal.gov/). Students are awarded full credit equivalent to graduate course at the host university. Taught at:
