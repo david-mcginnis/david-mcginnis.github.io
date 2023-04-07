@@ -15,6 +15,10 @@
   - title: "Microwave Measurements "
     url: "/microwaveMeasurementLab/"
 
+- title: Applications
+  url: "/myApps/"
+  side: left
+
 - title: Hylkevik Stones
   url: "/stones/"
   side: left
