@@ -18,6 +18,17 @@
 - title: Applications
   url: "/myApps/"
   side: left
+  dropdown:
+  - title: "SE4 Electric Spot Price Forecast"
+    url: "https://www.blinky-lite.se/espotPrice?name=SE4"
+  - title: "Solar Calculator"
+    url: "https://www.blinky-lite.se/solar-field-designer"
+  - title: "Mitt Brantevik"
+    url: "https://www.mittbrantevik.se/"
+  - title: "Mitt Bjerred"
+    url: "https://www.mittsaltsjobad.se/bjerred"
+  - title: "Tommy Three Tone"
+    url: "/tommy3tone/"
 
 - title: Hylkevik Stones
   url: "/stones/"
