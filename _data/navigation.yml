@@ -3,8 +3,11 @@
   side: left
 
 - title: About
-  url: "/mcginnisCV/"
+  url: "/info/"
   side: left
+  dropdown:
+  - title: "CV"
+    url: "/mcginnisCV/"
 
 - title: "RF Courses"
   url: "/rfcourses/"
