@@ -11,17 +11,26 @@ widget1:
   title: "Blinky-Lite"
   url: 'https://www.blinky-lite.se/'
   image: flowMeter302x182.jpg
-  text: ''
 widget2:
   title: "RF Courses"
   url: '/rfcourses/'
   image: rfq302x182.jpg
-  text: ''
 widget3:
   title: "Applications"
   url: '/myApps/'
   image: watchApp302x182.png
-  text: ''
+widget4:
+  title: "BL-MC"
+  url: 'https://www.bl-mc.se/'
+  image: fpga302x182.jpg
+widget5:
+  title: "Curriculum Vitae"
+  url: '/mcginnisCV/'
+  image: stochastic.jpg
+widget6:
+  title: "History"
+  url: '/history/'
+  image: stone1_302x182.png
   
 #
 # Use the call for action to show a button on the frontpage

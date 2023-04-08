@@ -6,7 +6,7 @@
   url: "/info/"
   side: left
   dropdown:
-  - title: "CV"
+  - title: "Curriculum Vitae"
     url: "/mcginnisCV/"
 
 - title: "RF Courses"
@@ -33,9 +33,14 @@
   - title: "Tommy Three Tone"
     url: "/tommy3tone/"
 
-- title: Hylkevik Stones
-  url: "/stones/"
+- title: History
+  url: "/history/"
   side: left
+  dropdown:
+  - title: "Stones of Hylkevik"
+    url: "/stones/"
+  - title: "The History of the Seahouse"
+    url: "/seahouse/"
 
 - title: "Search"
   url: "/search/"
