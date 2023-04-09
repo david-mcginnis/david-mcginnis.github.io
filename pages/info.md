@@ -7,7 +7,6 @@ permalink: "/info/"
 header:
     image_fullwidth: "gislovHammer.png"
 ---
-...and have a house in Brantevik.
+...and have a house in Brantevik with Diana McGinnis.
 
-
-
+![](/images/dianaAndMe.jpg)
