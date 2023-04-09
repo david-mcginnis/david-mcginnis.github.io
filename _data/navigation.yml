@@ -42,10 +42,6 @@
   - title: "The History of the Seahouse"
     url: "/seahouse/"
 
-- title: "Search"
-  url: "/search/"
-  side: right
-
 - title: "Contact"
   url: "/contact/"
   side: right
