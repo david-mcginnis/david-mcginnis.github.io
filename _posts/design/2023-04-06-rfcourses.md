@@ -11,8 +11,8 @@ show_meta: false
 breadcrumb: false
 
 ---
-## [Low Level RF](/llrf/)
-This course is ...
+## [Fundamentals of Radio Frequency Control for Particle Accelerators](/llrf/)
+Modern particle accelerators use electromagnetic energy at RF frequencies to accelerate particles. This course outlines the fundamental concepts needed to understand the monitoring and of the electromagnetic fields. Often this area of study is called "Low Level RF". This course was taught at the CERN CAS course on "RF for Accelerators", 18 June - 01 July 2023, Berlin Germany.
 
 ## [Radio Frequency Concepts and Techniques](/rfConcepts/)
 

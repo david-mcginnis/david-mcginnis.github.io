@@ -13,7 +13,7 @@
   url: "/rfcourses/"
   side: left
   dropdown:
-  - title: "Low Level RF"
+  - title: "Radio Frequency Control"
     url: "/llrf/"
   - title: "Radio Frequency Concepts"
     url: "/rfConcepts/"
